@@ -3,8 +3,19 @@
   "version": "1.0.0",
   "description": "Great moves, in gif form, all in one handy place.",
   "main": "index.js",
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.2"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "repository": {
     "type": "git",
@@ -13,7 +24,22 @@
   "author": "Ionut Bajescu & Sophie Rossiter",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sophieatgithub/Moooves/issues"
+  "url": "https://github.com/sophieatgithub/Moooves/issues"
+},
+  "homepage": "https://github.com/sophieatgithub/Moooves#readme",
+  "eslintConfig": {
+    "extends": "react-app"
   },
-  "homepage": "https://github.com/sophieatgithub/Moooves#readme"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
