@@ -11,8 +11,8 @@ import (
 
 type Move struct {
 	Title  string `json:"title"`
-	Videos []Video `json:"videos"`
 	Tags []string `json:"tags"`
+	Videos []Video `json:"videos"`
 }
 
 type Video struct {
@@ -33,8 +33,14 @@ func ServeHttp() {
 
 	addr := "0.0.0.0:5555"
 	log.Info().Msgf("Listening on http://%s", addr)
-	log.Panic().Err(http.ListenAndServe(addr, nil)).Send()
+	log.Panic().Err(http.ListenAndServe(addr, http.HandlerFunc(middleware))).Send()
 }
+
+func middleware(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	http.DefaultServeMux.ServeHTTP(w, r)
+}
+
 
 func routeTags(w http.ResponseWriter, _ *http.Request) {
 	var tags = map[string]bool{}
@@ -58,9 +64,24 @@ type ResponseMove struct {
 	Move
 	Thumbnail string `json:"thumbnail"`
 }
-func routeMoves(w http.ResponseWriter, _ *http.Request) {
-	var responseMoves []ResponseMove
+func routeMoves(w http.ResponseWriter, r *http.Request) {
+	var responseMoves = []ResponseMove{}
 	for i := range config.Moves {
+		if r.URL.Query().Get("tag") != "" {
+			found := false
+			for _, tag := range r.URL.Query()["tag"] {
+				for _, moveTag := range config.Moves[i].Tags {
+					if moveTag == tag {
+						found = true
+						fmt.Print("found")
+					}
+				}
+			}
+			if !found {
+				continue
+			}
+		}
+
 		// We use i in the URL because all thumbnail links are meant to be temporary anyway
 		responseMoves = append(responseMoves, ResponseMove{
 			config.Moves[i],
