@@ -12,7 +12,7 @@ class GifBox extends React.Component {
         this.state = {
           isLoading: true,
           gif: null,
-          tag: null,
+          tag: [],
         };
       }
     
@@ -41,8 +41,8 @@ class GifBox extends React.Component {
 
         // Update state with new data and re-render our component.????????????//
         const gif = "http://192.168.0.102:5555" + move.thumbnail;
-        const tag = move.tags[0];
-        console.log(gif);
+        const tag = move.tags;
+        console.log(tag);
 
         this.setState({
           ...this.state, ...{
