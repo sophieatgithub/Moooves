@@ -1,0 +1,11 @@
+{
+  "name": "frontend_2",
+  "version": "1.0.0",
+  "description": "Great moves, in gif form, all in one handy place.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ionut Bajescu & Sophie Rossiter",
+  "license": "ISC"
+}
