@@ -1,7 +1,10 @@
 {
-  "name": "frontend_2",
+  "name": "frontend",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "description": "Great moves, in gif form, all in one handy place.",
+  "author": "Ionut Bajescu & Sophie Rossiter",
+  "license": "ISC",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
