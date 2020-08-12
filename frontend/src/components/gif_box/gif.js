@@ -4,7 +4,7 @@ import filler from '../media/filler.jpeg';
 function Gif() {
     return(
         <div>
-            <img src={filler} alt="filler image" />        
+            <img src={filler} alt="filler" />        
         </div>
     )
 }
