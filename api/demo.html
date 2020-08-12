@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Moooves</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style>
+		#moves img {
+			width: 100%;
+			margin-bottom: -6px;
+		}
+
+	</style>
+</head>
+<body>
+	<br><br>
+	<div class="ui container">
+		<h1 class="ui header">Moooves</h1>
+
+		<div id="moves" class="ui three column grid">
+		</div>
+	</div>
+
+	<script>
+    $(window).bind("load",  function() {
+        $.get('/moves', function(response) {
+            response.moves.forEach(function(move) {
+                $('#moves').append(`<div class="column">
+				<img src="${move.thumbnail}" alt="">
+				<div class="ui bottom attached segment">
+					<h4 class="ui header">${move.title}</h4>
+                </div>
+				</div>`)
+            });
+        });
+    });
+	</script>
+</body>
+</html>
