@@ -1,10 +1,10 @@
 import React from 'react';
-import filler from '../media/filler.jpeg';
 
-function Gif() {
+function Gif(props) {
+
     return(
         <div>
-            <img src={filler} alt="filler" />        
+            <img src={props.gif} alt="gif of dance move" />        
         </div>
     )
 }
