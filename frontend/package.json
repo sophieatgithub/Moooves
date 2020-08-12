@@ -1,32 +1,24 @@
 {
-  "name": "moooves",
-  "version": "1.0.0",
-  "description": "Great moves, in gif form, all in one handy place.",
-  "main": "index.js",
+  "name": "frontend_2",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.2"
+    "react-scripts": "3.4.2",
+    "typescript": "^3.9.7"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sophieatgithub/Moooves.git"
-  },
-  "author": "Ionut Bajescu & Sophie Rossiter",
-  "license": "ISC",
-  "bugs": {
-  "url": "https://github.com/sophieatgithub/Moooves/issues"
-},
-  "homepage": "https://github.com/sophieatgithub/Moooves#readme",
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -41,5 +33,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@storybook/addon-actions": "^6.0.4",
+    "@storybook/addon-essentials": "^6.0.4",
+    "@storybook/addon-links": "^6.0.4",
+    "@storybook/node-logger": "^6.0.4",
+    "@storybook/preset-create-react-app": "^3.1.4",
+    "@storybook/react": "^6.0.4",
+    "babel-loader": "^8.1.0",
+    "react-is": "^16.13.1"
   }
 }
