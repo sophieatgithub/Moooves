@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import GifBox from './components/gif_box/gif_box';
+import ReturnedGifs from './components/gif_box/returned_gifs';
 
 function App() {
   return (
     <div className="App">
-      <GifBox />
+      <ReturnedGifs/>
     </div>
   );
 }
