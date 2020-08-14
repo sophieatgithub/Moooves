@@ -1,6 +1,7 @@
 import React from 'react';
 import API from './API';
 import GifBox from './gif_box';
+import '../../css/gif_grid.css'
 
 class ReturnedGifs extends React.Component {
     constructor(props) {
@@ -17,7 +18,9 @@ class ReturnedGifs extends React.Component {
         const { isLoading, movesArray, gif, tag } = this.state;
     
         return (
+          <div className="gifGridContainer">
                 <GifBox isLoading={isLoading} movesArray={movesArray} />
+          </div>      
         );
       }
     
