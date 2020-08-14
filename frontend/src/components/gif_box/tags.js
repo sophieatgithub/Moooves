@@ -4,6 +4,8 @@ function Tags(props) {
 
     const tagArray = props.tag;
 
+
+//Maps each tag in the array to its gif
     const Tags = ({tagArray}) => (
         <>
           {tagArray.map(tag => (

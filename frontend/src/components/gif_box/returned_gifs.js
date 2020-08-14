@@ -14,10 +14,10 @@ class ReturnedGifs extends React.Component {
       }
     
       render() {
-        const { isLoading, gif, tag } = this.state;
+        const { isLoading, movesArray, gif, tag } = this.state;
     
         return (
-                <GifBox isLoading={isLoading} tag={tag} gif={gif} />
+                <GifBox isLoading={isLoading} movesArray={movesArray} />
         );
       }
     
@@ -25,27 +25,18 @@ class ReturnedGifs extends React.Component {
         // Load async data.
         
         try {
-            let tagData = await API.get('', {
-            params: {}
+            let moveData = await API.get('', {
+            params: {} 
             });
 
-            // Individual move
-        const move = tagData.data.moves[0];
             // Array of move objects
-        const moveObject = tagData.data.moves;
-        console.log(moveObject);
-        
-  
+        const movesArray = moveData.data.moves;
 
-        // Update state with new data and re-render our component.
-        const gif = "http://192.168.0.102:5555" + move.thumbnail;
-        const tag = move.tags;
 
         this.setState({
           ...this.state, ...{
             isLoading: false,
-            gif,
-            tag
+            movesArray,
           }
         });
       } catch (e) {
