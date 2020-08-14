@@ -64,8 +64,15 @@ type ResponseMove struct {
 	Move
 	Thumbnail string `json:"thumbnail"`
 }
+func NewResponseMove(id int, move Move) ResponseMove {
+	return ResponseMove{
+		move,
+		fmt.Sprintf("/thumbnails/%d.gif?cache=%s", id, move.getThumbnailSourceHash()),
+	}
+}
 func routeMoves(w http.ResponseWriter, r *http.Request) {
 	var responseMoves = []ResponseMove{}
+	terms := strings.Split(strings.ToLower(r.URL.Query().Get("search")), " ")
 	for i := range config.Moves {
 		if r.URL.Query().Get("tag") != "" {
 			found := false
@@ -73,7 +80,6 @@ func routeMoves(w http.ResponseWriter, r *http.Request) {
 				for _, moveTag := range config.Moves[i].Tags {
 					if moveTag == tag {
 						found = true
-						fmt.Print("found")
 					}
 				}
 			}
@@ -82,11 +88,21 @@ func routeMoves(w http.ResponseWriter, r *http.Request) {
 			}
 		}
 
+		if len(terms) > 0 {
+			matches := true
+			title := strings.ToLower(config.Moves[i].Title)
+			for _, term := range terms {
+				if !strings.Contains(title, term) {
+					matches = false
+				}
+			}
+			if !matches {
+				continue
+			}
+		}
+
 		// We use i in the URL because all thumbnail links are meant to be temporary anyway
-		responseMoves = append(responseMoves, ResponseMove{
-			config.Moves[i],
-			fmt.Sprintf("/thumbnails/%d.gif", i),
-		})
+		responseMoves = append(responseMoves, NewResponseMove(i, config.Moves[i]))
 	}
 
 	respondWithJson(w, map[string]interface{}{

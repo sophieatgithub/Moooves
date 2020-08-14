@@ -15,7 +15,13 @@ func (m Move) path(extension string) string {
 
 func (m Move) getThumbnailSourceHash() ThumbnailSourceHash {
 	h := sha256.New()
-	h.Write([]byte(fmt.Sprintf("%v", m.Videos[0])))
+	var hash interface{}
+	if len(m.Videos) > 0 {
+		hash = m.Videos[0]
+	} else {
+		hash = m.Title
+	}
+	h.Write([]byte(fmt.Sprintf("%v", hash)))
 
 	return ThumbnailSourceHash(fmt.Sprintf("%x", h.Sum(nil)))
 }

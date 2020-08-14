@@ -28,6 +28,9 @@ moves:
     videos: [{url: "https://www.youtube.com/watch?v=yPHlFOyIlQA", start: 00:48, end: 00:52}]
   - title: Circle with final swinging kick
     tags: [Skye, Footwork]
+
+
+    
     videos:
       - {url: "https://www.youtube.com/watch?v=18IkHPqY1nU", start: 01:49, end: 01:53}
       - {url: "https://www.youtube.com/watch?v=yPHlFOyIlQA", start: 01:13, end: 01:16}
@@ -36,7 +39,19 @@ moves:
     videos: [{url: "https://www.youtube.com/watch?v=x_w6LkCmr0w", start: 00:48, end: 00:58}]
   - title: Leader under-hand into follow turn
     tags: [Nils, Power Move, Currently Learning]
-    videos: [{url: "https://www.youtube.com/watch?v=VI04hZILOuY", start: 01:05, end: 01:12}]
+    videos: [{url: "https://www.youtube.com/watch?v=VI04hZILOuY", start: 01:05, end: 01:09}]
+  - title: Right hand barrel roll
+    tags: [Remy, Right Hand, Barrel Roll]
+    videos: [{url: "https://www.youtube.com/watch?v=dmPnOYaBSFE", start: 05:55, end: 06:02}]
+  - title: Wiggly tuck-turn variation into pass-by variation
+    tags: [Remy, Footwork]
+    videos: [{url: "https://www.youtube.com/watch?v=dmPnOYaBSFE", start: 04:31, end: 04:39}]
+  - title: Eight count drop with send-out
+    tags: [Remy, Footwork]
+    videos: [{url: "https://www.youtube.com/watch?v=dmPnOYaBSFE", start: 04:56, end: 05:01}]
+  - title: Step-hop circle
+    tags: [Smiltys, Footwork]
+    videos: [{url: "https://www.youtube.com/watch?v=9ll4TqUvYQY", start: 03:10, end: 03:15}]
 
 
 
