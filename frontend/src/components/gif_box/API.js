@@ -2,6 +2,6 @@ import axios from 'axios';
 
 
 export default axios.create({
-    baseURL: "http://192.168.100.41:5555/moves",
+    baseURL: "https://api.moves.bajescu.com//moves",
     responseType: "json"
   });
