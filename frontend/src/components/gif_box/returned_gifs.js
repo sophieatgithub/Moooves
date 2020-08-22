@@ -16,6 +16,7 @@ class ReturnedGifs extends React.Component {
     
       render() {
         const { isLoading, movesArray, gif, tag } = this.state;
+        console.log(movesArray);
     
         return (
           <div className="gifGridContainer">

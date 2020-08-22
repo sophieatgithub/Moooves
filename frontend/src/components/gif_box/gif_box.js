@@ -1,4 +1,5 @@
 import React from 'react';
+import Title from './title';
 import Gif from './gif';
 import Tags from './tags';
 import '../../css/gif_grid.css';
@@ -10,8 +11,9 @@ function GifBox(props) {
         <>
             {movesArray.map(move => (
                 <div className="gifGridItem">
-                <Gif isLoading={props.isLoading} gif={move.thumbnail} />
-                <Tags isLoading={props.isLoading} tag={move.tags} />
+                <Title title={move.title} />
+                <Gif gif={move.thumbnail} />
+                <Tags tag={move.tags} />
                 </div>
             ))}
         </>
