@@ -3,7 +3,7 @@ import React from 'react';
 function Gif(props) {
 
     const gifAddress = props.gif;
-    const gif = "http://192.168.100.41:5555/" + gifAddress;
+    const gif = "https://api.moves.bajescu.com/" + gifAddress;
 
     console.log(props);
     return(
