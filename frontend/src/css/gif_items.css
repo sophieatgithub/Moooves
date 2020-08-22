@@ -1,0 +1,66 @@
+* {
+    font-family: Roboto;
+}
+
+.gifGridItem {
+    margin-bottom: 22px;
+    height: 270px;
+}
+
+.gif_title {
+    font-size: 18px;
+    font-variant: small-caps;
+    height:54px;
+    padding-top: 10px;
+}
+
+.gif {
+    width: 325px;
+}
+
+.tag {
+    padding: 6px;
+    font-size: 14px;
+}
+
+/* Small devices (landscape, px and up) */
+@media only screen and (min-width: 650px) {
+    .gifGridItem {
+        height: auto;
+    }
+
+    .gif_title {
+        height:40px;
+    }
+
+    .gif {
+        width: 480px;
+    }
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .gif_title {
+        height: 70px;
+    }
+
+    .gif {
+        width: 350px;
+    }
+} 
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .gif {
+        width: 300px;
+    }
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .gif {
+        width: 295px;
+    }
+}

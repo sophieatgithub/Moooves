@@ -8,7 +8,7 @@ function Gif(props) {
     console.log(props);
     return(
         <div>
-            <img src={gif} alt="gif of dance move" />        
+            <img src={gif} className="gif" alt="gif of dance move" />        
         </div>
     )
 } 

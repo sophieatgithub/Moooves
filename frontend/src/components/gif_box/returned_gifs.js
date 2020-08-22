@@ -9,14 +9,11 @@ class ReturnedGifs extends React.Component {
     
         this.state = {
           isLoading: true,
-          gif: null,
-          tag: [],
         };
       }
     
       render() {
-        const { isLoading, movesArray, gif, tag } = this.state;
-        console.log(movesArray);
+        const { isLoading, movesArray } = this.state;
     
         return (
           <div className="gifGridContainer">

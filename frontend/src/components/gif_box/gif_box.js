@@ -3,6 +3,7 @@ import Title from './title';
 import Gif from './gif';
 import Tags from './tags';
 import '../../css/gif_grid.css';
+import '../../css/gif_items.css';
 
 function GifBox(props) {
 
