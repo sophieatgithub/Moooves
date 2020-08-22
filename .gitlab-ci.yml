@@ -1,0 +1,27 @@
+variables:
+  BACKEND_IMAGE_NAME: $CI_REGISTRY_IMAGE/backend:$CI_PIPELINE_ID
+  FRONTEND_IMAGE_NAME: $CI_REGISTRY_IMAGE/frontend:$CI_PIPELINE_ID
+
+.build:
+  stage: build
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
+  before_script:
+    - echo "{\"auths\":{\"$CI_REGISTRY\":{\"username\":\"$CI_REGISTRY_USER\",\"password\":\"$CI_REGISTRY_PASSWORD\"}}}" > /kaniko/.docker/config.json
+  only: [master]
+
+build backend:
+  extends: .build
+  script: /kaniko/executor --context ./api --destination "$BACKEND_IMAGE_NAME"
+
+deploy backend:
+  stage: deploy
+  image: dtzar/helm-kubectl
+  script:
+    - set -xv
+    - sed -i "s#IMAGE_NAME#$IMAGE_NAME#g" api/k8s.yaml
+    - cat api/k8s.yaml
+    - kubectl apply -f api/k8s.yaml
+  only: [master]
+  tags: [pheonix]
