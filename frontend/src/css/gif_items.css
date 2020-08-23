@@ -3,7 +3,7 @@
 }
 
 .gifGridItem {
-    margin-bottom: 22px;
+    margin-bottom: 50px;
     height: 270px;
     padding-left: 10px;
     padding-right: 10px;
@@ -11,9 +11,6 @@
 
 .gif_title {
     font-size: 18px;
-    font-variant: small-caps;
-    height:54px;
-    padding-top: 10px;
 }
 
 .gif {
@@ -31,10 +28,6 @@
         height: auto;
     }
 
-    .gif_title {
-        height:40px;
-    }
-
     .gif {
         width: 480px;
     }
@@ -42,10 +35,6 @@
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    .gif_title {
-        height: 70px;
-    }
-
     .gif {
         width: 350px;
     }
@@ -62,10 +51,6 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    .gif_title {
-        margin-top: 30px;
-    }
-
     .gif {
         width: 295px;
     }

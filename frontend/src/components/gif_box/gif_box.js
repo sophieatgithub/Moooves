@@ -12,8 +12,8 @@ function GifBox(props) {
         <>
             {movesArray.map(move => (
                 <div className="gifGridItem">
-                <Title title={move.title} />
                 <Gif gif={move.thumbnail} />
+                <Title title={move.title} />
                 <Tags tag={move.tags} />
                 </div>
             ))}
