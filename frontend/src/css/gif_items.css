@@ -5,6 +5,8 @@
 .gifGridItem {
     margin-bottom: 22px;
     height: 270px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .gif_title {
@@ -60,6 +62,10 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+    .gif_title {
+        margin-top: 30px;
+    }
+
     .gif {
         width: 295px;
     }
