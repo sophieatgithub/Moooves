@@ -9,7 +9,7 @@ function Tags(props) {
     const Tags = ({tagArray}) => (
         <>
           {tagArray.map(tag => (
-            <span className="tag" key={tag}>{tag},</span>
+            <span className="tag" key={tag}>{tag}</span>
           ))}
         </>
       ); 
