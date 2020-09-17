@@ -1,5 +1,6 @@
 import React from 'react';
 import API from './API';
+import { parameters } from "../app_bar/search";
 import GifBox from './gif_box';
 import '../../css/gif_grid.css'
 
@@ -22,16 +23,20 @@ class ReturnedGifs extends React.Component {
         );
       }
     
-      async componentDidMount() {
+      async componentDidMount(parameters) {
         // Load async data.
+        // var parameters = props.parameters;
         
         try {
             let moveData = await API.get('', {
-            params: {} 
+            params: {
+              parameters
+            } 
             });
 
             // Array of move objects
         const movesArray = moveData.data.moves;
+        console.log(parameters);
 
 
         this.setState({

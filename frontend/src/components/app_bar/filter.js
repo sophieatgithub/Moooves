@@ -5,7 +5,7 @@ function Filter() {
 
     return(
         <div>
-            <img src={filterIcon}/>  
+            <img src={filterIcon} alt="filter icon"/>  
         </div>
     )
 } 
