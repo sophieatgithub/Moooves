@@ -1,6 +1,6 @@
 import React from 'react';
 import Title from './title';
-import Gif from './gif';
+import Gif from './gif1';
 import Tags from './tags';
 import '../../css/gif_grid.css';
 import '../../css/gif_items.css';

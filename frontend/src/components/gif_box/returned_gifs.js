@@ -17,9 +17,12 @@ class ReturnedGifs extends React.Component {
         const { isLoading, movesArray } = this.state;
     
         return (
-          <div className="gifGridContainer">
-                <GifBox isLoading={isLoading} movesArray={movesArray} />
-          </div>      
+          <div className="gridContainer">
+            <div className="gifGridContainer">
+              <GifBox isLoading={isLoading} movesArray={movesArray} />
+            </div>  
+          </div>
+    
         );
       }
     
