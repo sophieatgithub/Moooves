@@ -4,7 +4,7 @@ function SiteTitle() {
 
     return(
         <div>
-            <h1>Moooves</h1>   
+            <h1 className="site_title">Moooves</h1>   
         </div>
     )
 } 

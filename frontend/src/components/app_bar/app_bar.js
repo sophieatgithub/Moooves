@@ -1,16 +1,16 @@
 import React from 'react';
 import SiteTitle from './site_title';
-import Filter from './filter';
 import Search from './search';
+import User from './user';
 import '../../css/app_bar.css';
 
 function AppBar() {
 
     return(
-        <div className="flex_container">
+        <div className="appbar_container">
             <SiteTitle />
-            <Filter />
             <Search />  
+            <User />
         </div>
     )
 } 

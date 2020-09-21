@@ -1,4 +1,28 @@
-.flex_container {
+.appbar_container {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+}
+
+.site_title {
+    font-size: 20px;
+    width: 87px;
+}
+.appbar_search {
+    height: 24px;
+}
+.appbar_user {
+    height: 24px;
+    align-self: flex-end;
+}
+
+/* Removes button styling on search icon */
+.search_button {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
