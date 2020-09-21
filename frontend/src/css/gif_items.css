@@ -1,6 +1,7 @@
 .gifGridItem {
-    margin-bottom: 50px;
+    margin-bottom: 45px;
     height: 270px;
+    width: 316px;
 }
 
 .gif_container {
@@ -9,22 +10,21 @@
 }
 
 .gif {
-    width: 325px;
+    width: 316px;
 }
 
 .gif_title {
     font-size: 18px;
     text-align: left;
-    margin-left: 25px;
+    margin-bottom: 1px;
 }
 
 .tag_container {
     margin-bottom: 10px;
-    margin-left: 25px;
 }
 
 .tag {
-    font-size: 14px;
+    font-size: 11px;
     text-align: left;
     padding-right: 10px;
 }
@@ -33,32 +33,32 @@
 @media only screen and (min-width: 650px) {
     .gifGridItem {
         height: auto;
-    }
-
-    .gif {
         width: 480px;
     }
+    .gif {
+        width: 480px;
+    } 
 } 
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    .gif_title {
-        height: 54px;
+    .gifGridItem {
+        width: 40vw;
     }
     .gif {
         max-width: 40vw;
     }
-    .gif_title {
-        margin-left: 10px;
-    }
-    .tag_container {
-        margin-left: 10px;
+    .titlentag_container {
+        height: 78px;
     }
 } 
 
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+    .gifGridItem {
+        width: 26vw;
+    }
     .gif {
         max-width: 26vw;
     }
@@ -67,13 +67,5 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    .gif {
-        max-width: 26vw;
-    }
-    .gif_title {
-        margin-left: 20px;
-    }
-    .tag_container {
-        margin-left: 20px;
-    }
+
 }
