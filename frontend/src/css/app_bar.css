@@ -5,20 +5,36 @@
 }
 
 .site_title {
+    position: absolute;
+    left: 72px;
     font-size: 20px;
     width: 87px;
+}
+.menu_button {
+    position: absolute;
+    left: 16px;
 }
 .appbar_menu {
     height: 24px;
     width: 24px;
 }
+.search_button {
+    position: absolute;
+    right: 64px;
+}
 .appbar_search {
     height: 24px;
 }
+.user_button {
+    position: absolute;
+    right: 16px;
+}
 .appbar_user {
     height: 24px;
-
 }
+
+
+
 
 /* Removes button styling on icons */
 .menu_button,

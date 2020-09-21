@@ -13,10 +13,7 @@ function Search() {
     }
 
     return (
-        <div>
-            {/* <input onChange={handleInput} /> */}
             <button onClick={passParameters} className="search_button"><img src={searchIcon} alt="search icon" className="appbar_search"/></button>
-        </div>
     );
 }
 
