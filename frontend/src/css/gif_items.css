@@ -3,20 +3,33 @@
     height: 270px;
 }
 
-.gif_title {
-    font-size: 18px;
+.gif_container {
+    display: flex;
+    justify-content: center;
 }
 
 .gif {
     width: 325px;
 }
 
-.tag {
-    padding: 6px;
-    font-size: 14px;
+.gif_title {
+    font-size: 18px;
+    text-align: left;
+    margin-left: 25px;
 }
 
-/* Small devices (landscape, px and up) */
+.tag_container {
+    margin-bottom: 10px;
+    margin-left: 25px;
+}
+
+.tag {
+    font-size: 14px;
+    text-align: left;
+    padding-right: 10px;
+}
+
+/* Small devices (landscape, 650px and up) */
 @media only screen and (min-width: 650px) {
     .gifGridItem {
         height: auto;
@@ -29,8 +42,17 @@
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+    .gif_title {
+        height: 54px;
+    }
     .gif {
         max-width: 40vw;
+    }
+    .gif_title {
+        margin-left: 10px;
+    }
+    .tag_container {
+        margin-left: 10px;
     }
 } 
 
@@ -47,5 +69,11 @@
 @media only screen and (min-width: 1200px) {
     .gif {
         max-width: 26vw;
+    }
+    .gif_title {
+        margin-left: 20px;
+    }
+    .tag_container {
+        margin-left: 20px;
     }
 }

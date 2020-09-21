@@ -5,7 +5,7 @@ import AppBar from './components/app_bar/app_bar';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <AppBar />
       <ReturnedGifs />
     </div>

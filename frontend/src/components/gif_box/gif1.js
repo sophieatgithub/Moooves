@@ -6,7 +6,7 @@ function Gif(props) {
     const gif = "https://api.moves.bajescu.com/" + gifAddress;
 
     return(
-        <div>
+        <div className="gif_container" >
             <img src={gif} className="gif" alt="gif of dance move" />        
         </div>
     )

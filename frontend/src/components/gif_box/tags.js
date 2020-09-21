@@ -15,7 +15,7 @@ function Tags(props) {
       ); 
 
     return(
-        <div>
+        <div className="tag_container">
             <Tags tagArray={tagArray} />
         </div>
     )
