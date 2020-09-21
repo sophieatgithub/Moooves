@@ -8,16 +8,22 @@
     font-size: 20px;
     width: 87px;
 }
+.appbar_menu {
+    height: 24px;
+    width: 24px;
+}
 .appbar_search {
     height: 24px;
 }
 .appbar_user {
     height: 24px;
-    align-self: flex-end;
+
 }
 
-/* Removes button styling on search icon */
-.search_button {
+/* Removes button styling on icons */
+.menu_button,
+.search_button, 
+.user_button{
     background: none;
 	color: inherit;
 	border: none;

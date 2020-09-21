@@ -4,9 +4,9 @@ import imageIcon from '../../media/user.png';
 function User() {
 
     return(
-        <div>
+        <button className="user_button" type="button">
             <img src={imageIcon} alt="user icon" className="appbar_user"/> 
-        </div>
+        </button>
     )
 } 
 
